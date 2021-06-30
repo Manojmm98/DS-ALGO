@@ -9,21 +9,22 @@ public class Main {
         int n = scn.nextInt();
         int m = scn.nextInt();
         // we created a array of n+! length
+        // here m=16 and n =39
         int dp[]= new int[n+1];
         for(int i=0;i<=n;i++){
             // if i==0 means we are in 0th index then i can fill with 1 tiles
             if(i==0){
                 dp[i]=1;
             }
-            // when i which reprents the number of tiles is less than the width then we can fill it through one way and thst is horizontaly
+            // when i which reprents the number of i is less than m then we can fill it through one way and thst is horizontaly
             else if(i<m){
                 dp[i]=1;
             }
-            // if the tile length and and floor length equal then we can place it through horizentally or vertically means 2 ways
+            // if i==m equal then we can place it through horizentally or vertically means 2 ways case arises when i=16
             else if(i==m){
                 dp[i]=2;
             }
-            // when the no of tiles is grater than then we can fill through below ways
+            // when i is grater than  m then we can fill through below ways
             else{
                 dp[i]=dp[i-m]+dp[i-1];
             }
