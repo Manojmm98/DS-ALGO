@@ -12,6 +12,15 @@ public class Main {
         // in dp[1]=1 in 1st place we fill up in 1 way either verticaly or horizontaly
         dp[0]=1;
         dp[1] =1;
+        // or we can also write
+        
+        
+
+        // dp[1] =1;
+        // dp[2] =2;
+
+
+
         // after 0 and 1 index we can put the tiles in the sum of i-1 and i-2 ways 
         // let here i=2 so dp[2-1]=dp[1]=1,dp[0]=1,-------> dp[i]=1+1=2 and so on
         for(int i=2;i<=n;i++){
