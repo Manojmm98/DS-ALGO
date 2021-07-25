@@ -15,7 +15,8 @@ public class Main {
         // the profit will be calculated by diffrentating the prices of current day that we are buying and the previous day 
         // here the profit will be calculated diffrentating by prices of that and the buyday that we have set
         int overallprofit=0,currentprofit=0,buyday=0;
-        for (int day = 0; day<prices.length; day++){
+        //we arestarting from day 1 because in day 0 profit will be 0
+        for (int day = 1; day<prices.length; day++){
             // if the prices of that day is less than the prices of the previous day that we have set as our buyday then here we can not buy
             // because we are facing loss here so update only the buyday 
             if(prices[day]<prices[buyday]){
