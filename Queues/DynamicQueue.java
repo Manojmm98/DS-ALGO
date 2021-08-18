@@ -1,4 +1,4 @@
-import java.io.*;
+public import java.io.*;
 import java.util.*;
 
 public class Main {
@@ -28,14 +28,27 @@ public class Main {
     }
 
     void add(int val) {
-      // if we want to add an element into a queue then we just have to find the idx where we have to add the value and will drop the value there
       if(size==data.length){
-          System.out.println("Queue overflow");
-          return;
+          //System.out.println("Queue overflow");
+          // create newdata array of double length
+          
+          int newData[]= new int[2*data.length];
+          // copy elements from old array
+          for(int i=0;i<data.length;i++){
+              newData[i]=data[(front+i)%data.length];
+          }
+          // change reference of old data to newdata
+          data=newData;
+          // correct the front index
+          front=0;
+          // add the value
+          add(val);
       }
+      else{
       int idx = (front+size) % data.length;
        data[idx]=val;
       size++;
+      }
     }
 
     int remove() {
@@ -43,8 +56,6 @@ public class Main {
           System.out.println("Queue underflow");
           return -1;
       }
-      // if we want to remove element from a queue then we will remove it from front side so 1st we have to make front value to 0 then increase the front index and
-      // as we are removing elements then decrease the size
       int val = data[front];
       data[front]=0;
       front= (front+1)%data.length;
@@ -91,4 +102,6 @@ public class Main {
       str = br.readLine();
     }
   }
+}class DynamicQueue {
+    
 }
