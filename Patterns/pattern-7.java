@@ -28,7 +28,7 @@ public class Main {
                   System.out.print("*\t");
               }
               else{
-                  System.out.println("\t");
+                  System.out.print("\t");
               }
           }
           System.out.println();
