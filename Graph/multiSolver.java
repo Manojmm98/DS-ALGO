@@ -99,6 +99,7 @@ public class Main {
            if(pq.size()<k){
                pq.add(new Pair(wsf,psf));
            }
+           // if we got k element then we will check if the weight of smalles weighted element in the queue is less than the current weighted element then remove that element and add the current element pair into queue with psf and wsf
            else{
                if(pq.peek().wsf<wsf){
                pq.remove();
