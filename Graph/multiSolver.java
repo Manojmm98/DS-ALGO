@@ -57,7 +57,7 @@ public class Main {
       multisolver(graph, src, dest, visited, criteria, k, src + "", 0);
       
       System.out.println("Smallest Path = " + spath + "@" + spathwt);
-      System.out.println("Largest Path = " + lpath + "@" + lpathwt);
+      System  .out.println("Largest Path = " + lpath + "@" + lpathwt);
       System.out.println("Just Larger Path than " + criteria + " = " + cpath + "@" + cpathwt);
       System.out.println("Just Smaller Path than " + criteria + " = " + fpath + "@" + fpathwt);
       System.out.println(k + "th largest path = " + pq.peek().psf + "@" + pq.peek().wsf);
@@ -121,7 +121,7 @@ public class Main {
            //floor-> less than criteria and will be larger among fpathwt
             if(wsf<criteria && wsf>fpathwt){
                fpathwt=wsf;
-               fpath=psf;
+               fpath=psf; 
                
            }
            // at last return 
