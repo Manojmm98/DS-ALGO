@@ -35,3 +35,32 @@ public static void main(String[] args) throws Exception {
  }
 
 }
+
+
+// with the help of functions 
+
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    Scanner scn = new Scanner(System.in);
+    int n = scn.nextInt();
+    int arr[] =new int[n];
+    for (int i = 0; i < arr.length; i++) {
+       arr[i]= scn.nextInt();   
+    }
+  int digit = scn.nextInt();
+  getElement(arr,digit);
+ }
+
+ public static void getElement(int []arr,int digit) {
+     for (int i = 0; i < arr.length; i++) {
+         if(arr[i]==digit){
+             System.out.println(i);
+             return;
+         }
+
+     }
+         System.out.println(-1);
+ }
+
+}
