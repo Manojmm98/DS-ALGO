@@ -25,6 +25,7 @@ public static void main(String[] args) throws Exception {
        }
    }
 
+   // If length  coloums of 1st array and length of rows of 2nd array is not equal then multiplication not possible
   if(c1 != r2){
       System.out.println("Invalid input");
       return;
