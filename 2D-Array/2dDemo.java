@@ -16,7 +16,7 @@ import java.util.*;
         arr[i][j]= scn.nextInt();
       }
     }
-// print all the rows and coloums
+// print all the rows and coloums here i referes to row and j to coloum
 // here arr.length = rows and arr[i].length = colums
 // we can take arr[0],arr[1] or arr[2] for column length
     for(int i=0;i<arr.length;i++){
